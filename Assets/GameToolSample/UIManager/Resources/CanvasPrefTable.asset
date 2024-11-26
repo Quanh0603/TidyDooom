@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: CanvasPrefTable
   m_EditorClassIdentifier: 
   Serializers:
-  - key: 
+  - key: MainMenu
     settingUI:
       UIType: 0
-      baseUI: {fileID: 3746711819652261224, guid: 92ebea078950d8a4c8ebf41e7845f3ef, type: 3}
-      resourcePath: 
+      baseUI: {fileID: 3973703191774195607, guid: 4d66ba691394e1449bc8d541f706aeea, type: 3}
+      resourcePath: UI/MainMenu
     isDuplicatedKey: 0

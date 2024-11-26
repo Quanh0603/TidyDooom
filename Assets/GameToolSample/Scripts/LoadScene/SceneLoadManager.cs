@@ -155,7 +155,7 @@ namespace GameToolSample.Scripts.LoadScene
         /// </summary>
         public void LoadSceneStart()
         {
-            string nameScene = nameSceneGamePlay;
+            string nameScene = nameSceneHome;
 
             if (GameTool.API.Scripts.API.Instance.IsFirstOpenTime)
             {

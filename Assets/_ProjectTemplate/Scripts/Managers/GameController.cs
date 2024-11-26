@@ -1,4 +1,6 @@
 ﻿using _ProjectTemplate.Scripts.Base;
+using GameTool.Audio.Scripts;
+using GameToolSample.Audio;
 using GameToolSample.GameDataScripts.Scripts;
 using GameToolSample.GamePlay.Manager;
 using UnityEngine;
@@ -14,8 +16,9 @@ namespace _ProjectTemplate.Scripts.Managers
         protected override void Start()
         {
             base.Start();
-
-            GameData.Instance.GameModeData.Level = 1;
+            
+            AudioManager.Instance.StopMusic();
+            AudioManager.Instance.PlayMusic(eMusicName.BG_Ingame);
 
             var level = GameData.Instance.GameModeData.Level;
             LoadLevel(level);

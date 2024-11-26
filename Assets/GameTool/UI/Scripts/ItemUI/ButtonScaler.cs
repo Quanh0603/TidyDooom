@@ -1,5 +1,4 @@
 ﻿using DG.Tweening;
-using GameTool.Audio;
 using GameTool.Audio.Scripts;
 using GameTool.Vibration;
 using GameToolSample.Audio;

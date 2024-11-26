@@ -109,7 +109,7 @@ namespace GameTool.GameDataScripts.Editor
             horizontal.style.justifyContent = new StyleEnum<Justify>(Justify.Center);
             root.Add(horizontal);
 
-            var percentBtn = 197 / 3f;
+            var percentBtn = 97 / 3f;
 
             horizontal.Add(CreateButtonPercentWidth(() =>
             {

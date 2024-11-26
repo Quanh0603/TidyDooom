@@ -34,7 +34,7 @@ namespace GameToolSample.GameDataScripts.Scripts
         [Header("LEVEL")] public int CurrentLevel = 1;
 
         public int LevelUnlocked = 1;
-        public List<int> ListLevelUnlockID = new List<int> { 0 };
+        public List<int> ListLevelUnlockID = new List<int> { 1 };
 
         [Header("DAILY REWARD")] [DateTimeAsTicks]
         public long DayLogin = 1;
