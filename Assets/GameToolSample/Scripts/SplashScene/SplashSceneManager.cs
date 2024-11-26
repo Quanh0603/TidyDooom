@@ -9,7 +9,8 @@ namespace GameTool.Assistants
     public class SplashSceneManager : SingletonMonoBehaviour<SplashSceneManager>
     {
         [SerializeField] private float maxTimeWaitLoadSceneStart = 1f;
-        [SerializeField] private bool loadSceneStart = true;
+
+        private bool loadSceneStart = true;
 
         private void Start()
         {

@@ -131,11 +131,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 233018795}
+  - component: {fileID: 3201443130930539237}
   - component: {fileID: 233018794}
   - component: {fileID: 233018793}
   - component: {fileID: 233018792}
   - component: {fileID: 778895655673374820}
-  - component: {fileID: 3201443130930539237}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
 --- !u!114 &233018793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +368,10 @@ PrefabInstance:
     - target: {fileID: 3730555727146710782, guid: 3cb5a41ba27b64f03998af787591fc40, type: 3}
       propertyPath: m_Name
       value: GametoolServices
+      objectReference: {fileID: 0}
+    - target: {fileID: 5555892339150871453, guid: 3cb5a41ba27b64f03998af787591fc40, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
