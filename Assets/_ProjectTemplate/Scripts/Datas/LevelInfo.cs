@@ -11,16 +11,20 @@ namespace _ProjectTemplate.Scripts.Datas
 
         public Sprite spriteInHome;
 
+        public int timePlay;
+
         public int levelParse => int.Parse(name.Replace("Level ", ""));
-        
+
 #if UNITY_EDITOR
         private void OnValidate()
         {
             if (level == 0)
             {
                 level = int.Parse(name.Replace("Level ", ""));
-                EditorUtility.SetDirty(this);
             }
+
+            timePlay = 60;
+            EditorUtility.SetDirty(this);
         }
 #endif
     }
