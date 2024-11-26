@@ -1,0 +1,44 @@
+using DevUlts.Ults;
+using UnityEngine;
+using UnityEngine.Rendering;
+
+namespace DevUlts.AnimationUtils
+{
+    public class AnimatedSortingGroup : MonoBehaviour
+    {
+        [SerializeField] private SortingGroup _sortingGroup;
+        [SortingLayerAtt] [SerializeField] private string _layer;
+        [SerializeField] private int _order;
+
+        private void Update()
+        {
+            Apply();
+        }
+
+        private void OnDrawGizmos()
+        {
+            if (!Application.isPlaying)
+            {
+                Apply();
+            }
+        }
+
+        public void Apply()
+        {
+            if (!enabled)
+            {
+                return;
+            }
+
+            if (_sortingGroup.sortingLayerName != _layer)
+            {
+                _sortingGroup.sortingLayerName = _layer;
+            }
+
+            if (_sortingGroup.sortingOrder != _order)
+            {
+                _sortingGroup.sortingOrder = _order;
+            }
+        }
+    }
+}

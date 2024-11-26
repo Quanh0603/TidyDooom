@@ -1,0 +1,36 @@
+namespace GameToolSample.GameDataScripts.Scripts
+{
+    public enum eData
+    {
+        None,
+        FirstOpen,
+        FirstPlay,
+        Rated,
+        RemoveAds,
+        GDPR,
+        GDPRShowed,
+        MuteAll,
+        Music,
+        SoundFX,
+        Vibrate,
+        MasterVolume,
+        MusicVolume,
+        SoundFXVolume,
+        Coin,
+        Diamond,
+        VictoryCount,
+        LoseCount,
+        CurrentLevel,
+        LevelUnlocked,
+        ListLevelUnlockID,
+        DictLevelPlayInfoData,
+        DayLogin,
+        DayDailyReward,
+        StartAngleSpin,
+        CanSpin,
+        TimeSpin,
+        CountDownTimeSpin,
+        ListIdSkinSpin,
+        CurrentLanguage,
+    }
+}
