@@ -19,3 +19,39 @@ MonoBehaviour:
       baseUI: {fileID: 3973703191774195607, guid: 4d66ba691394e1449bc8d541f706aeea, type: 3}
       resourcePath: UI/MainMenu
     isDuplicatedKey: 0
+  - key: GameplayMenu
+    settingUI:
+      UIType: 0
+      baseUI: {fileID: -6433816938688464512, guid: 245f65bab2c9d0f4eb56d33387a3af9b, type: 3}
+      resourcePath: UI/GameplayMenu
+    isDuplicatedKey: 0
+  - key: HintPopup
+    settingUI:
+      UIType: 1
+      baseUI: {fileID: -766814330596085844, guid: 6ec7b7ff8c801f3498cdbb045e8d0396, type: 3}
+      resourcePath: UI/HintPopup
+    isDuplicatedKey: 0
+  - key: PausePopup
+    settingUI:
+      UIType: 1
+      baseUI: {fileID: -3371930709811916410, guid: 5e7c54c97d3887545b5ebc4ce81be538, type: 3}
+      resourcePath: UI/PausePopup
+    isDuplicatedKey: 0
+  - key: SettingPopup
+    settingUI:
+      UIType: 1
+      baseUI: {fileID: 6060037272960432494, guid: ccc80d970749582469ea243f98dcb2b1, type: 3}
+      resourcePath: UI/SettingPopup
+    isDuplicatedKey: 0
+  - key: TimeOutPopup
+    settingUI:
+      UIType: 1
+      baseUI: {fileID: 2222006615843776953, guid: 7fa72fe1c881456439635cbfbc6bdea3, type: 3}
+      resourcePath: UI/TimeOutPopup
+    isDuplicatedKey: 0
+  - key: VictoryPopup
+    settingUI:
+      UIType: 1
+      baseUI: {fileID: 9184198814273495697, guid: c68053e04c82e1a46b9c4a855b1d67fe, type: 3}
+      resourcePath: UI/VictoryPopup
+    isDuplicatedKey: 0

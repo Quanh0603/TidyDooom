@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace _ProjectTemplate.Scripts.Datas
@@ -7,6 +8,11 @@ namespace _ProjectTemplate.Scripts.Datas
     public class LevelDataResources : ScriptableObject
     {
         public List<LevelInfo> levels = new List<LevelInfo>();
+
+        public LevelInfo GetLevelInfo(int level)
+        {
+            return levels.FirstOrDefault(info => info.level == level);
+        }
     }
 
 

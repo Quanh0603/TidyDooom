@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace _ProjectTemplate.Scripts.Datas
         public Sprite spriteInHome;
 
         public int timePlay;
+
+        public List<Sprite> hintSprites;
 
         public int levelParse => int.Parse(name.Replace("Level ", ""));
 

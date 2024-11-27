@@ -1,8 +1,12 @@
-﻿using _ProjectTemplate.Scripts.Base;
+﻿using System;
+using _ProjectTemplate.Scripts.Base;
+using _ProjectTemplate.Scripts.Datas;
+using _ProjectTemplate.Scripts.UI;
 using GameTool.Audio.Scripts;
 using GameToolSample.Audio;
 using GameToolSample.GameDataScripts.Scripts;
 using GameToolSample.GamePlay.Manager;
+using GameToolSample.Scripts.Enum;
 using UnityEngine;
 
 namespace _ProjectTemplate.Scripts.Managers
@@ -12,11 +16,16 @@ namespace _ProjectTemplate.Scripts.Managers
         public new static GameController Instance => (GameController)GameManager.Instance;
 
         private LevelBase loadedLevel;
+        private LevelInfo levelInfo;
 
-        protected override void Start()
+        private float totalTime;
+        private float timeLeft;
+
+        public float TimeLeft => timeLeft;
+
+        protected void Start()
         {
-            base.Start();
-            
+            PlayGame();
             AudioManager.Instance.StopMusic();
             AudioManager.Instance.PlayMusic(eMusicName.BG_Ingame);
 
@@ -45,12 +54,18 @@ namespace _ProjectTemplate.Scripts.Managers
             }
 
             var level = Resources.Load<LevelBase>($"_Levels/Level_{levelIndex}");
+            levelInfo = DataResources.GetLevelDataResources().GetLevelInfo(levelIndex);
             loadedLevel = Instantiate(level, transform);
-            Debug.Log("Loading Level: " + level.name);
+            totalTime = levelInfo.timePlay;
+            timeLeft = totalTime;
+            GameplayMenu.Instance.UpdateTimer(timeLeft);
+            bool activeHint = levelInfo.hintSprites.Count > 0;
+            GameplayMenu.Instance.hintButton.gameObject.SetActive(activeHint);
         }
 
         public void PauseGame()
         {
+            GameplayStatus = AnalyticID.GamePlayState.pause;
             if (loadedLevel != null)
             {
                 loadedLevel.Pause();
@@ -59,10 +74,32 @@ namespace _ProjectTemplate.Scripts.Managers
 
         public void ResumeGame()
         {
+            GameplayStatus = AnalyticID.GamePlayState.playing;
             if (loadedLevel != null)
             {
                 loadedLevel.Resume();
             }
+        }
+
+        private void Update()
+        {
+            if (!IsGamePlayStatus(AnalyticID.GamePlayState.playing))
+            {
+                return;
+            }
+
+            timeLeft -= Time.deltaTime;
+            GameplayMenu.Instance.UpdateTimer(timeLeft);
+        }
+
+        public override void SkipLevel()
+        {
+            Debug.LogError("Game Controller: ---- Skip Level");
+        }
+
+        public override void ReplayLevel()
+        {
+            Debug.LogError("Game Controller: ---- Replay Level");
         }
     }
 }

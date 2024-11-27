@@ -15,3 +15,7 @@ MonoBehaviour:
   level: 1
   spriteInHome: {fileID: 21300000, guid: 3be7921a0318b5f4baad3deb02b81e27, type: 3}
   timePlay: 60
+  hintSprites:
+  - {fileID: 21300000, guid: adf340b06fbc14b4d9bbc1b8abb01910, type: 3}
+  - {fileID: 21300000, guid: 77e675d169425124082c6cffd10f1916, type: 3}
+  - {fileID: 21300000, guid: 448b9e4de8a5fd648a2992800905a615, type: 3}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1df854db09946abb9e6cf8053e9c155, type: 3}
   m_Name: Level 8
   m_EditorClassIdentifier: 
-  level: 1
+  level: 8
   spriteInHome: {fileID: 21300000, guid: 3be7921a0318b5f4baad3deb02b81e27, type: 3}
   timePlay: 60
+  hintSprites: []

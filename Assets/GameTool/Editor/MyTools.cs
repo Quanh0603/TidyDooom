@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 namespace GameTool.Editor
 {
-    public class MyTools
+    public static class MyTools
     {
         [MenuItem("MyTools/Clear Data", priority = 0)]
         private static void ClearData()

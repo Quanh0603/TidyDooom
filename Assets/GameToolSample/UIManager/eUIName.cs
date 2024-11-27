@@ -4,7 +4,11 @@ namespace GameToolSample.UIManager
     {
         None,
         VictoryPopup,
-        RevivePopup,
         MainMenu,
+        GameplayMenu,
+        HintPopup,
+        PausePopup,
+        SettingPopup,
+        TimeOutPopup,
     }
 }
