@@ -37,6 +37,7 @@ namespace _ProjectTemplate.Scripts.Levels
         {
             base.OnPointerDownHandle();
 
+            // Check logic nhấn xuống
             var hits = GetAllRaycastHit(pickupLayer);
             if (hits.Length > 0)
             {
@@ -63,6 +64,7 @@ namespace _ProjectTemplate.Scripts.Levels
 
         protected override void OnDragHandle()
         {
+            // Check logic khi kéo
             if (!currentItem)
             {
                 return;
@@ -73,6 +75,11 @@ namespace _ProjectTemplate.Scripts.Levels
 
         private void SetCurrentItemPositionOnDrag()
         {
+            if (!currentItem)
+            {
+                return;
+            }
+
             var item = currentItem;
 
             var mousePosition = GetMousePosition() + hitPointOffset;
@@ -96,6 +103,7 @@ namespace _ProjectTemplate.Scripts.Levels
             {
                 return;
             }
+            // Check logic thả ra
 
             UnselectItem();
         }
