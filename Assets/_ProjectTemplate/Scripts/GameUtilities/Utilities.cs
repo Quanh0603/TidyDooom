@@ -80,7 +80,7 @@ namespace GameTool.Assistants
         {
             return Mathf.Ceil(_value * Mathf.Pow(10, indexRound)) / Mathf.Pow(10, indexRound);
         }
-
+        
         #endregion Mathf
     }
 }
